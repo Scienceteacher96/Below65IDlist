@@ -26,6 +26,7 @@ student_list_df = student_list_df.loc[student_list_df['First Name'].isin(firstNa
 IDlist = student_list_df['Perm ID'].tolist()
 gradeList = gradebook_df['PERCENTAGE'].tolist()
 
+#exporting the ids and grades to excel
 exportList = [('ID', 'Grade')]
 for i, ID in enumerate(IDlist):
     exportList.append((ID, gradeList[i]))
